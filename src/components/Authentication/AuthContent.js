@@ -28,7 +28,7 @@ const Auth = styled.div`
   }
   
   .auth_logo_block {
-    display: ${({ mobileMenu }) => mobileMenu ? 'none' : 'flex'};
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -42,16 +42,51 @@ const Auth = styled.div`
     cursor: pointer;
   }
   
+  .auth-mobile {
+    display: none;
+  }
+  
+  .login-register {
+    display: none;
+  }
+  
   @media only screen and (max-width: 700px) {
       display: flex;
       position: fixed;
       bottom: 0;
-      top: ${({ mobileMenu }) => mobileMenu ? '0' : '85%'};
+      top: ${({ mobileMenu }) => mobileMenu ? '25%' : '82%'};
       width: 100%;
       align-items: center;
       transition-property: all;
       transition-duration: .5s;
       transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    
+    .auth-desktop {
+      display: none;
+    }
+    
+    .auth-mobile {
+      display: unset;
+    }
+    
+    .login-register {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 15px;
+    }
+    
+    .login-register button {
+      padding: 3px 25px;
+      margin: 5px 30px;
+      background-color: #5181B8;
+      color: white;
+      border: none;
+      border-radius: 3px;
+    }
+
+    .login-register .current-section {
+      background-color: #1B6DD1;
+    }
     
     .bring-up-button {
       display: unset;
@@ -68,6 +103,7 @@ export default function AuthContent() {
 
     const [mobileMenu, setMobileMenu] = React.useState(false)
     const [hideDesktop, setHideDesktop] = React.useState(false)
+    const [currentSection, setCurrentSection] = React.useState('login')
 
     return (
         <>
@@ -91,8 +127,22 @@ export default function AuthContent() {
                     <CropDinIcon className="logoIcon" />
                     <h2 className="logo">| GoElectrical</h2>
                 </div>
-                <Login />
-                <Registration />
+                <div className="auth-desktop">
+                    <Login />
+                    <Registration />
+                </div>
+                <div className="auth-mobile">
+                <div className="login-register">
+                    <button className='current-section' onClick={() => setCurrentSection('login')}>Login</button>
+                    <button onClick={() => setCurrentSection('register')}>Register</button>
+                </div>
+                {currentSection === 'login' ?
+                      <Login />
+                    : <Registration />
+                }
+                </div>
+
+
             </Auth>
         </>
     )
