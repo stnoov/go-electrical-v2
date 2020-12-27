@@ -54,7 +54,7 @@ const Auth = styled.div`
       display: flex;
       position: fixed;
       bottom: 0;
-      top: ${({ mobileMenu }) => mobileMenu ? '25%' : '82%'};
+      top: ${({ mobileMenu }) => mobileMenu ? '10%' : '82%'};
       width: 100%;
       align-items: center;
       transition-property: all;
