@@ -1,0 +1,38 @@
+.auth_form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.auth_form form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 3px;
+    padding: 25px;
+}
+
+.auth_form form input {
+    font-family: Roboto, serif;
+    font-size: 14px;
+    padding: 6px 12px;
+    min-width: 244px;
+    margin-bottom: 15px;
+    border: 1px solid #D3D9DE;
+    border-radius: 3px;
+}
+
+.auth_button {
+    font-family: Roboto, serif;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 3px;
+}
