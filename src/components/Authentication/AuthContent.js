@@ -84,8 +84,12 @@ const Auth = styled.div`
       border-radius: 3px;
     }
 
-    .login-register .current-section {
-      background-color: #1B6DD1;
+    .login-register .login-section {
+      background-color: ${({ currentSection }) => currentSection === 'login' ? '#1B6DD1' : '#5181B8'};
+    }
+
+    .login-register .register-section {
+      background-color: ${({ currentSection }) => currentSection === 'register' ? '#1B6DD1' : '#5181B8'};
     }
     
     .bring-up-button {
@@ -112,7 +116,7 @@ export default function AuthContent() {
                     setHideDesktop(!hideDesktop)
                 }} />
             </div>
-            <Auth mobileMenu={mobileMenu} hideDesktop={hideDesktop}>
+            <Auth mobileMenu={mobileMenu} hideDesktop={hideDesktop} currentSection={currentSection}>
                 <div className="hide-desktop">
                     <ArrowBackIcon onClick={() => setHideDesktop(!hideDesktop)}/>
                 </div>
@@ -133,8 +137,8 @@ export default function AuthContent() {
                 </div>
                 <div className="auth-mobile">
                 <div className="login-register">
-                    <button className='current-section' onClick={() => setCurrentSection('login')}>Login</button>
-                    <button onClick={() => setCurrentSection('register')}>Register</button>
+                    <button className='login-section' onClick={() => setCurrentSection('login')}>Login</button>
+                    <button className='register-section' onClick={() => setCurrentSection('register')}>Register</button>
                 </div>
                 {currentSection === 'login' ?
                       <Login />

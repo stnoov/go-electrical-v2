@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c4fb831-d0d3-4b85-a09d-637f17225325" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Authentication/Auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Authentication/Auth.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Authentication/AuthContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Authentication/AuthContent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609077719679</updated>
       <workItem from="1609077720767" duration="515000" />
-      <workItem from="1609078771849" duration="13518000" />
+      <workItem from="1609078771849" duration="14667000" />
     </task>
     <task id="LOCAL-00001" summary="All-in-One commit: Add map, add authentication sidebar">
       <created>1609097446585</created>
@@ -76,7 +79,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609099017970</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Set bottom menu a little higher">
+      <created>1609099142761</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609099142761</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add meta tag to restrict zoom in inputs">
+      <created>1609099354684</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609099354684</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +114,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="All-in-One commit: Add map, add authentication sidebar" />
     <MESSAGE value="Separate login and registration in mobile version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Separate login and registration in mobile version" />
+    <MESSAGE value="Set bottom menu a little higher" />
+    <MESSAGE value="Add meta tag to restrict zoom in inputs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add meta tag to restrict zoom in inputs" />
   </component>
 </project>
