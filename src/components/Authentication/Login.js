@@ -3,18 +3,28 @@ import './Auth.css'
 import Axios from "axios";
 import {useFormik} from "formik";
 
-export default function Login() {
+export default function Login(props) {
 
-    const {handleSubmit, handleChange, values} = useFormik({
+    const {handleSubmit, handleChange, values, resetForm} = useFormik({
         initialValues: {
             loginEmail: '',
             loginPassword: ''
         },
-        onSubmit: (loginEmail,loginPassword) => {
+        onSubmit: () => {
             Axios.post("https://go-electrical-server.herokuapp.com/login", {
                 email: values.loginEmail,
                 password: values.loginPassword
-            })}})
+            }).then((response) => {
+                if(!response.data === false) {
+                    props.setLoggedInUser(response.data[0])
+                    console.log(props.loggedInUser)
+                } else {
+                    props.NotificationDanger('Wrong username or password')
+                    console.log('ERROR')
+                    resetForm()
+                }
+            })
+        }})
 
     return (
         <div>

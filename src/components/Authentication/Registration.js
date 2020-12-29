@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import Axios from "axios";
 
 
-export default function Registration() {
+export default function Registration(props) {
 
     const {handleSubmit, handleChange, values, touched, errors, handleBlur, resetForm, isSubmitting} = useFormik({
         initialValues: {
@@ -15,8 +15,8 @@ export default function Registration() {
             password: ''
         },
         validationSchema: Yup.object({
-            first_name: Yup.string().max(100, 'First name is too long!').min(2, 'First name is too short!').required('First name is required!'),
-            last_name: Yup.string().max(100, 'Last name is too long!').min(2, 'Last name is too short!').required('Last name is required!'),
+            first_name: Yup.string().max(100, 'First name is too long!').required('First name is required!'),
+            last_name: Yup.string().max(100, 'Last name is too long!').required('Last name is required!'),
             email: Yup.string().email('Invalid email').max(250, 'Email is too long!').min(8, 'Email must be at least 8 characters!').required('Email is required!'),
             password: Yup.string().max(250, 'Password is too long!').min(6, 'Password must be at least 6 characters!').required('Password is required!')
         }),
@@ -28,6 +28,14 @@ export default function Registration() {
                 password: values.password,
                 balance: 0,
                 created_at: Date.now()
+            }).then((response) => {
+                if(response.data === true) {
+                    props.NotificationSuccess('You have been registered!')
+                    resetForm();
+                } else {
+                    console.log('ERROR')
+                    resetForm()
+                }
             })
         }})
 

@@ -20,11 +20,20 @@ const Auth = styled.div`
   align-items: flex-start;
   height: 100%;
   background-color: #EDEEF0;
-  padding: 20px 50px;
-
+  
+  
+  .auth-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+  }
+  
   .bring-up-button {
     display: none;
     margin-bottom: 10px;
+    border-bottom: 1px solid #D3D9DE;
+    padding: 0;
+    width: 100%;
   }
   
   .auth_logo_block {
@@ -39,6 +48,8 @@ const Auth = styled.div`
     display: flex;
     justify-self: flex-end;
     align-self: flex-end;
+    margin-top: 25px;
+    margin-right: 20px;
     cursor: pointer;
   }
   
@@ -60,6 +71,8 @@ const Auth = styled.div`
       transition-property: all;
       transition-duration: .5s;
       transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
     
     .auth-desktop {
       display: none;
@@ -103,7 +116,7 @@ const Auth = styled.div`
   }
 `
 
-export default function AuthContent() {
+export default function AuthContent(props) {
 
     const [mobileMenu, setMobileMenu] = React.useState(false)
     const [hideDesktop, setHideDesktop] = React.useState(false)
@@ -117,23 +130,27 @@ export default function AuthContent() {
                 }} />
             </div>
             <Auth mobileMenu={mobileMenu} hideDesktop={hideDesktop} currentSection={currentSection}>
-                <div className="hide-desktop">
-                    <ArrowBackIcon onClick={() => setHideDesktop(!hideDesktop)}/>
-                </div>
-
                 <div className='bring-up-button'>
                     {mobileMenu ?
                         <ExpandMoreIcon onClick={() => setMobileMenu(!mobileMenu)} />
                         : <KeyboardArrowUpIcon onClick={() => setMobileMenu(!mobileMenu)} />
                     }
-                    </div>
+                </div>
+                <div className="hide-desktop">
+                    <ArrowBackIcon onClick={() => setHideDesktop(!hideDesktop)}/>
+                </div>
+                <div className="auth-content">
                 <div className="auth_logo_block">
                     <CropDinIcon className="logoIcon" />
                     <h2 className="logo">| GoElectrical</h2>
                 </div>
                 <div className="auth-desktop">
-                    <Login />
-                    <Registration />
+                    <Login
+                        setLoggedInUser={props.setLoggedInUser}
+                        loggedInUser={props.loggedInUser}
+                    />
+                    <Registration
+                    />
                 </div>
                 <div className="auth-mobile">
                 <div className="login-register">
@@ -141,12 +158,19 @@ export default function AuthContent() {
                     <button className='register-section' onClick={() => setCurrentSection('register')}>Register</button>
                 </div>
                 {currentSection === 'login' ?
-                      <Login />
-                    : <Registration />
+                      <Login
+                          setLoggedInUser={props.setLoggedInUser}
+                          loggedInUser={props.loggedInUser}
+                          NotificationDanger={props.NotificationDanger}
+
+                      />
+                    : <Registration
+                        NotificationSuccess={props.NotificationSuccess}
+                    />
                 }
                 </div>
 
-
+                </div>
             </Auth>
         </>
     )
