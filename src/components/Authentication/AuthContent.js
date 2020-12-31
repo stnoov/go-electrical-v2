@@ -6,7 +6,6 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import CropDinIcon from '@material-ui/icons/CropDin';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-
 import styled from 'styled-components'
 
 const Auth = styled.div`
@@ -65,8 +64,9 @@ const Auth = styled.div`
       display: flex;
       position: fixed;
       bottom: 0;
-      top: ${({ mobileMenu }) => mobileMenu ? '0' : '82%'};
+      top: unset;
       width: 100%;
+      height:  ${({ mobileMenu }) => mobileMenu ? '82%' : '4%'};
       align-items: center;
       transition-property: all;
       transition-duration: .5s;
@@ -157,17 +157,39 @@ export default function AuthContent(props) {
                     <button className='login-section' onClick={() => setCurrentSection('login')}>Login</button>
                     <button className='register-section' onClick={() => setCurrentSection('register')}>Register</button>
                 </div>
-                {currentSection === 'login' ?
-                      <Login
-                          setLoggedInUser={props.setLoggedInUser}
-                          loggedInUser={props.loggedInUser}
-                          NotificationDanger={props.NotificationDanger}
 
-                      />
-                    : <Registration
-                        NotificationSuccess={props.NotificationSuccess}
-                    />
-                }
+                    {props.useWindowSize.width > 700 ? <>
+                            <Login
+                                setLoggedInUser={props.setLoggedInUser}
+                                loggedInUser={props.loggedInUser}
+                                NotificationDanger={props.NotificationDanger}
+
+                            />
+                            <Registration
+                                NotificationSuccess={props.NotificationSuccess}
+                            />
+                        </>
+                        :currentSection === 'login' ? <Login
+                                setLoggedInUser={props.setLoggedInUser}
+                                loggedInUser={props.loggedInUser}
+                                NotificationDanger={props.NotificationDanger}
+
+                            />
+                            :currentSection === 'register' ? <Registration
+                                NotificationSuccess={props.NotificationSuccess}
+                            />
+                            : <span />}
+                {/*{currentSection === 'login' ?*/}
+                {/*      <Login*/}
+                {/*          setLoggedInUser={props.setLoggedInUser}*/}
+                {/*          loggedInUser={props.loggedInUser}*/}
+                {/*          NotificationDanger={props.NotificationDanger}*/}
+
+                {/*      />*/}
+                {/*    : <Registration*/}
+                {/*        NotificationSuccess={props.NotificationSuccess}*/}
+                {/*    />*/}
+                {/*}*/}
                 </div>
 
                 </div>
