@@ -36,7 +36,12 @@ export default function Main() {
                 NotificationSuccess={NotificationSuccess}
                 useWindowSize={useWindowSize}
             />
-            : <Navigation />
+            : <Navigation
+                    loggedInUser={loggedInUser}
+                    setLoggedInUser={setLoggedInUser}
+                    NotificationDanger={NotificationDanger}
+                    NotificationSuccess={NotificationSuccess}
+                />
             }
 
             <Map

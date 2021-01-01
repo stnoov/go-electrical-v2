@@ -5,6 +5,9 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 import ProfileModal from "../Modals/ProfileModal";
 import ConnectionsModal from "../Modals/ConnectionsModal";
+import NotificationDanger from "../Notifications/NotificationDanger";
+import NotificationSuccess from "../Notifications/NotificationSuccess";
+import AuthContent from "../Authentication/AuthContent";
 
 const Nav = styled.div`
   display: flex;
@@ -72,7 +75,7 @@ const Nav = styled.div`
   
 `
 
-export default function Navigation() {
+export default function Navigation(props) {
 
     return(
         <Nav>
@@ -81,7 +84,12 @@ export default function Navigation() {
                 <h2 className="logo ">| GoElectrical</h2>
             </div>
             <ul className="nav-links">
-                <ProfileModal />
+                <ProfileModal
+                    loggedInUser={props.loggedInUser}
+                    setLoggedInUser={props.setLoggedInUser}
+                    NotificationDanger={props.NotificationDanger}
+                    NotificationSuccess={props.NotificationSuccess}
+                />
                 <ConnectionsModal />
                 <li><AccountBalanceWalletIcon className='mr-2'/> <span className='desktop-only'>Wallet</span></li>
                 <li><ExitToAppIcon className='mr-2'/> <span className='desktop-only'>Logout</span></li>

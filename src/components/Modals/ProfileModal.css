@@ -1,0 +1,38 @@
+.profile-user-info {
+    list-style-type: none;
+    text-align: left;
+    padding-inline-start: 0;
+}
+
+.email-password {
+    display: flex;
+    justify-content: center;
+}
+
+.email-password .change-email,
+.email-password .change-password {
+    display: flex;
+    margin: 0 10px;
+    padding: 3px 20px;
+    background-color: #1B6DD1;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.save-button {
+    padding: 3px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .email-password .change-email,
+    .email-password .change-password {
+        margin: 0 5px;
+        font-size: 13px;
+    }
+}

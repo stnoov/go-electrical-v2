@@ -13,7 +13,7 @@ export default function ConnectionsModal() {
         <>
             <li onClick={handleShow}><HistoryIcon className='mr-2'/> <span className='desktop-only'>Connections</span></li>
 
-            <Modal show={show} onHide={handleClose} animation={false}>
+            <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Connections</Modal.Title>
                 </Modal.Header>
