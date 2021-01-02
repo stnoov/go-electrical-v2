@@ -1,0 +1,13 @@
+.stop-charging {
+    font-family: Roboto, serif;
+    background-color: #DC143C;
+    display: block;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 4px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 3px;
+}

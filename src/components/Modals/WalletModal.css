@@ -1,0 +1,15 @@
+.wallet-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+.addBalanceButton {
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 3px;
+}

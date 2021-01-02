@@ -1,13 +1,9 @@
 import React from "react";
 import styled from 'styled-components'
-import CropDinIcon from "@material-ui/icons/CropDin";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 import ProfileModal from "../Modals/ProfileModal";
 import ConnectionsModal from "../Modals/ConnectionsModal";
-import NotificationDanger from "../Notifications/NotificationDanger";
-import NotificationSuccess from "../Notifications/NotificationSuccess";
-import AuthContent from "../Authentication/AuthContent";
+import WalletModal from "../Modals/WalletModal";
 
 const Nav = styled.div`
   display: flex;
@@ -80,8 +76,7 @@ export default function Navigation(props) {
     return(
         <Nav>
             <div className="nav_logo_block">
-                <CropDinIcon className="logoIcon" />
-                <h2 className="logo ">| GoElectrical</h2>
+                <h2 className="logo ">GoElectrical</h2>
             </div>
             <ul className="nav-links">
                 <ProfileModal
@@ -90,9 +85,21 @@ export default function Navigation(props) {
                     NotificationDanger={props.NotificationDanger}
                     NotificationSuccess={props.NotificationSuccess}
                 />
-                <ConnectionsModal />
-                <li><AccountBalanceWalletIcon className='mr-2'/> <span className='desktop-only'>Wallet</span></li>
-                <li><ExitToAppIcon className='mr-2'/> <span className='desktop-only'>Logout</span></li>
+                <ConnectionsModal
+                    loggedInUser={props.loggedInUser}
+                    setLoggedInUser={props.setLoggedInUser}
+                    NotificationDanger={props.NotificationDanger}
+                    NotificationSuccess={props.NotificationSuccess}
+                    getStations={props.getStations}
+                    stations={props.stations}
+                />
+                <WalletModal
+                    loggedInUser={props.loggedInUser}
+                    setLoggedInUser={props.setLoggedInUser}
+                    NotificationDanger={props.NotificationDanger}
+                    NotificationSuccess={props.NotificationSuccess}
+                />
+                <li onClick={() => props.setLoggedInUser('')}><ExitToAppIcon className='mr-2'/> <span className='desktop-only'>Logout</span></li>
             </ul>
         </Nav>
     )

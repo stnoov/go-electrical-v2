@@ -3,7 +3,6 @@ import Registration from "./Registration";
 import Login from "./Login";
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import CropDinIcon from '@material-ui/icons/CropDin';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import styled from 'styled-components'
@@ -122,6 +121,8 @@ export default function AuthContent(props) {
     const [hideDesktop, setHideDesktop] = React.useState(false)
     const [currentSection, setCurrentSection] = React.useState('login')
 
+    const screen = props.useWindowSize()
+
     return (
         <>
             <div className="show-desktop">
@@ -141,24 +142,16 @@ export default function AuthContent(props) {
                 </div>
                 <div className="auth-content">
                 <div className="auth_logo_block">
-                    <CropDinIcon className="logoIcon" />
-                    <h2 className="logo">| GoElectrical</h2>
+                    <h2 className="logo">GoElectrical</h2>
                 </div>
-                <div className="auth-desktop">
-                    <Login
-                        setLoggedInUser={props.setLoggedInUser}
-                        loggedInUser={props.loggedInUser}
-                    />
-                    <Registration
-                    />
-                </div>
-                <div className="auth-mobile">
-                <div className="login-register">
-                    <button className='login-section' onClick={() => setCurrentSection('login')}>Login</button>
+                <div className="login-register auth-mobile">
+                    <button className='login-section' onClick={() =>
+                    {setCurrentSection('login')
+                        }}>Login</button>
                     <button className='register-section' onClick={() => setCurrentSection('register')}>Register</button>
                 </div>
-
-                    {props.useWindowSize.width > 700 ? <>
+                    {screen.width > 700 ?
+                        <div>
                             <Login
                                 setLoggedInUser={props.setLoggedInUser}
                                 loggedInUser={props.loggedInUser}
@@ -168,29 +161,18 @@ export default function AuthContent(props) {
                             <Registration
                                 NotificationSuccess={props.NotificationSuccess}
                             />
-                        </>
-                        :currentSection === 'login' ? <Login
+                        </div>
+                        :currentSection === 'login' ?
+                            <Login
                                 setLoggedInUser={props.setLoggedInUser}
                                 loggedInUser={props.loggedInUser}
                                 NotificationDanger={props.NotificationDanger}
 
                             />
                             :currentSection === 'register' ? <Registration
-                                NotificationSuccess={props.NotificationSuccess}
-                            />
-                            : <span />}
-                {/*{currentSection === 'login' ?*/}
-                {/*      <Login*/}
-                {/*          setLoggedInUser={props.setLoggedInUser}*/}
-                {/*          loggedInUser={props.loggedInUser}*/}
-                {/*          NotificationDanger={props.NotificationDanger}*/}
-
-                {/*      />*/}
-                {/*    : <Registration*/}
-                {/*        NotificationSuccess={props.NotificationSuccess}*/}
-                {/*    />*/}
-                {/*}*/}
-                </div>
+                                    NotificationSuccess={props.NotificationSuccess}
+                                />
+                                : <span />}
 
                 </div>
             </Auth>

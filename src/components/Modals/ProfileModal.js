@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal, Button, Row, Col, Container} from "react-bootstrap";
+import {Modal, Row, Col, Container} from "react-bootstrap";
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import ChangePassword from "../Utils/ProfileUtils/ChangePassword";
 import ChangeEmail from "../Utils/ProfileUtils/ChangeEmail";
@@ -21,7 +21,7 @@ export default function ProfileModal(props) {
                 <Modal.Header closeButton>
                     <Modal.Title>PROFILE</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
+                <Modal.Body className='profile-modal'>
                     <Container>
                         <Row>
                             <Col>

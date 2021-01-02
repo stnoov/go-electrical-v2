@@ -3,8 +3,11 @@ import './Map.css';
 import React, {useEffect, useState} from "react";
 import {GoogleMap, InfoWindow, Marker, useLoadScript} from "@react-google-maps/api";
 import chargingStationPicture from "../Images/charging_station.png";
+import SearchBar from "../Search/Searchbar";
+
 import Axios from "axios";
 import LoadingOverlay from 'react-loading-overlay';
+import moment from "moment";
 
 
 const mapContainerStyle = {
@@ -19,12 +22,11 @@ const options = {
 }
 
 const Map = (props) => {
-    const [stations, setStations] = useState([]);
+
     useEffect(() => {
-        Axios.get('https://go-electrical-server.herokuapp.com/stations_data').then((response) => {
-            setStations(response.data);
-        })
+        props.getStations()
     }, [])
+
     const [center,setCenter] = React.useState({
         lat: 65.0121,
         lng: 25.4651
@@ -33,23 +35,45 @@ const Map = (props) => {
     const {isLoaded, loadError} = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_API
     });
+
+    const startCharging = () => {
+        if (props.loggedInUser.balance <= 0) {
+            props.NotificationDanger('Please, add balance first')
+        } else {
+            Axios.post('https://go-electrical-server.herokuapp.com/user/{props.loggedInUser.id}/station/{props.selectedStation.station_id}/start_charging', {
+                userId: props.loggedInUser.id,
+                stationId: props.selectedStation.station_id,
+                started_at: moment().toDate()
+            }).then((response) => {
+                props.NotificationSuccess('Charging has been started')
+                props.getStations()
+            })
+        }
+    }
+
     if(loadError) return "Error loading maps";
     if(!isLoaded) return "Loading maps"
     return (
 
         <div>
             <LoadingOverlay
-                active={stations.length === 0}
+                active={props.stations.length === 0}
                 spinner
             >
+                <SearchBar
+                    setCenter={setCenter}
+                    setZoom={setZoom}
+                    selectedStation = {props.selectedStation}
+                    setSelectedStation={props.setSelectedStation}
+                />
                 <GoogleMap
                     mapContainerStyle={mapContainerStyle}
                     zoom={zoom}
                     center={center}
                     options={options}
                 >
-                    {stations.length > 0 &&
-                    stations.map((station, index) => <Marker
+                    {props.stations.length > 0 &&
+                    props.stations.map((station, index) => <Marker
                             key={index}
                             onClick={() => {props.setSelectedStation(station)}}
                             position={{lat: station.lat, lng: station.lng}}
@@ -76,6 +100,9 @@ const Map = (props) => {
                                         {props.selectedStation.price === '0' ? <h4>Free</h4>
                                         : <h4>{props.selectedStation.price}€/minute</h4> }
                                         </li>
+                                    {props.selectedStation.is_taken === 0 && props.loggedInUser !== '' ?
+                                    <div className='description-button'><button className='button-charge' onClick={() => {startCharging()}}>Charge</button></div>
+                                        : null }
                                 </ul>
                             </div>
                         </div>

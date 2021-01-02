@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    padding-inline-start: 0;
 }
 
 .station-description li {
@@ -20,6 +21,19 @@
 .danger_text {
     color: red;
     font-weight: 600;
+}
+
+.description-button {
+    margin-top: -15px;
+    align-self: flex-start;
+}
+
+.button-charge {
+    background-color: #1B6DD1;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
 }
 
 @media only screen and (max-width: 700px) {
