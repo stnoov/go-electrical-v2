@@ -145,7 +145,7 @@ export default function AuthContent(props) {
                     <ArrowBackIcon onClick={() => setHideDesktop(!hideDesktop)}/>
                 </div>
                 <div className="auth-content">
-                <div className="auth_logo_block">
+                <div className="auth_logo_block auth-desktop">
                     <h2 className="logo">GoElectrical</h2>
                 </div>
                 <div className="login-register auth-mobile">
