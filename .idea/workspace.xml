@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c4fb831-d0d3-4b85-a09d-637f17225325" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Modals/WalletModal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modals/WalletModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/Searchbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/Searchbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Utils/Connections.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Utils/Connections.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Authentication/AuthContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Authentication/AuthContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Map/Map.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Map/Map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Map/Map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modals/ConnectionsModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modals/ConnectionsModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modals/ProfileModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modals/ProfileModal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modals/ProfileModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modals/ProfileModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Utils/WindowSize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Utils/WindowSize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +75,7 @@
       <workItem from="1609459753347" duration="1369000" />
       <workItem from="1609505559078" duration="4950000" />
       <workItem from="1609514579676" duration="14667000" />
-      <workItem from="1609591834079" duration="7329000" />
+      <workItem from="1609591834079" duration="7706000" />
     </task>
     <task id="LOCAL-00001" summary="All-in-One commit: Add map, add authentication sidebar">
       <created>1609097446585</created>
@@ -160,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609510659705</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="All-in-One commit: add search bar, add connections modal">
+      <created>1609603980618</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609603980618</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +175,7 @@
     <MESSAGE value="Add notifications to mobile version" />
     <MESSAGE value="All-in-One commit: Add navigation, add modals examples" />
     <MESSAGE value="Add functionalities to profile modal: change password, change email" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add functionalities to profile modal: change password, change email" />
+    <MESSAGE value="All-in-One commit: add search bar, add connections modal" />
+    <option name="LAST_COMMIT_MESSAGE" value="All-in-One commit: add search bar, add connections modal" />
   </component>
 </project>

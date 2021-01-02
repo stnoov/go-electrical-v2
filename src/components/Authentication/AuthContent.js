@@ -65,7 +65,7 @@ const Auth = styled.div`
       bottom: 0;
       top: unset;
       width: 100%;
-      height:  ${({ mobileMenu }) => mobileMenu ? '82%' : '4%'};
+      height:  ${({ mobileMenu }) => mobileMenu ? '100%' : '6%'};
       align-items: center;
       transition-property: all;
       transition-duration: .5s;
