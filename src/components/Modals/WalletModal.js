@@ -17,7 +17,6 @@ export default function WalletModal(props) {
         Axios.post("https://go-electrical-server.herokuapp.com/user/{props.loggedInUser.id}/add_balance", {
             email: loggedInEmail
         }).then((response) => {
-            console.log(response.data)
             props.setLoggedInUser(response.data[0]);
             props.NotificationSuccess('Balance has been updated!')
             handleClose()

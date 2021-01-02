@@ -17,7 +17,6 @@ export default function Login(props) {
             }).then((response) => {
                 if(!response.data === false) {
                     props.setLoggedInUser(response.data[0])
-                    console.log(props.loggedInUser)
                 } else {
                     props.NotificationDanger('Wrong username or password')
                     console.log('ERROR')
