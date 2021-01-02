@@ -4,6 +4,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import ProfileModal from "../Modals/ProfileModal";
 import ConnectionsModal from "../Modals/ConnectionsModal";
 import WalletModal from "../Modals/WalletModal";
+import useWindowSize from "../Utils/WindowSize";
 
 const Nav = styled.div`
   display: flex;
@@ -92,6 +93,7 @@ export default function Navigation(props) {
                     NotificationSuccess={props.NotificationSuccess}
                     getStations={props.getStations}
                     stations={props.stations}
+                    useWindowSize={useWindowSize}
                 />
                 <WalletModal
                     loggedInUser={props.loggedInUser}

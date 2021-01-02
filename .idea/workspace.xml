@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c4fb831-d0d3-4b85-a09d-637f17225325" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Authentication/AuthContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Authentication/AuthContent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Utils/ConnectionsMobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modals/ConnectionsModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modals/ConnectionsModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Utils/Connections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Utils/Connections.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +82,8 @@
       <workItem from="1609505559078" duration="4950000" />
       <workItem from="1609514579676" duration="14667000" />
       <workItem from="1609591834079" duration="7706000" />
-      <workItem from="1609604328456" duration="381000" />
+      <workItem from="1609604328456" duration="1292000" />
+      <workItem from="1609626841730" duration="2906000" />
     </task>
     <task id="LOCAL-00001" summary="All-in-One commit: Add map, add authentication sidebar">
       <created>1609097446585</created>
@@ -155,7 +162,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609604369554</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="hotfix for auth">
+      <created>1609604827297</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609604827297</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Remove logo from mobile version">
+      <created>1609605022764</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609605022764</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +206,8 @@
     <MESSAGE value="Add functionalities to profile modal: change password, change email" />
     <MESSAGE value="All-in-One commit: add search bar, add connections modal" />
     <MESSAGE value="Change auth height in mobile version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change auth height in mobile version" />
+    <MESSAGE value="hotfix for auth" />
+    <MESSAGE value="Remove logo from mobile version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove logo from mobile version" />
   </component>
 </project>

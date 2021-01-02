@@ -73,13 +73,13 @@
 
 @media only screen and (max-width: 600px) {
     .react-autosuggest__input {
-        min-width: unset;
+        min-width: 300px;
         width: 100%;
     }
     .react-autosuggest__suggestions-container--open {
-        min-width: unset;
+        min-width: 300px;
     }
     .react-autosuggest__suggestion {
-        min-width: unset;
+        min-width: 300px;
     }
 }

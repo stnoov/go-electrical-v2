@@ -52,6 +52,7 @@ export default function Main() {
                     NotificationSuccess={NotificationSuccess}
                     getStations={getStations}
                     stations={stations}
+                    useWindowSize={useWindowSize}
                 />
             }
             <Map
