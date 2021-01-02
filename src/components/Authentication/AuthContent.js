@@ -73,6 +73,10 @@ const Auth = styled.div`
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
     
+    .auth-logo-block {
+      margin-bottom: 10px;
+    }
+    
     .auth-desktop {
       display: none;
     }
