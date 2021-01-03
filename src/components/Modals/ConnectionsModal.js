@@ -7,7 +7,7 @@ import ConnectionsMobile from "../Utils/ConnectionsMobile";
 
 export default function ConnectionsModal(props) {
 
-    const [currentConnections, getCurrentConnections] = React.useState()
+
     const [show, setShow] = React.useState(false);
 
     const screen = props.useWindowSize()
@@ -15,7 +15,10 @@ export default function ConnectionsModal(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const updateConnections = () => {
+
+    const [currentConnections, getCurrentConnections] = React.useState()
+
+    const updateConnections = async () => {
         console.log('CONNECTIONS UPDATED')
         Axios.post('https://go-electrical-server.herokuapp.com/connections_data', {
             userId: props.loggedInUser.id

@@ -8,7 +8,7 @@ import './Connections.css'
 
 export default function Connections(props) {
 
-    const stopCharging = (active_con, bill) => {
+    const stopCharging = async (active_con, bill) => {
         Axios.post('https://go-electrical-server.herokuapp.com/user/{props.loggedInUser.id}/station/{props.selectedStation.station_id}/stop_charging', {
             userId: props.loggedInUser.id,
             userEmail: props.loggedInUser.email,
@@ -18,11 +18,11 @@ export default function Connections(props) {
         }).then(
             (response) => {
                 props.setLoggedInUser(response.data[0])
+                props.updateConnections()
+                props.getStations()
+                props.NotificationSuccess('Charging has been stopped')
             }
         )
-        props.updateConnections()
-        props.getStations()
-        props.NotificationSuccess('Charging has been stopped')
     }
 
 

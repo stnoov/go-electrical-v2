@@ -1,4 +1,3 @@
-import Moment from "react-moment";
 import moment from "moment";
 import React from "react";
 import Axios from "axios";

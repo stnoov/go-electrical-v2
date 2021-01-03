@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c4fb831-d0d3-4b85-a09d-637f17225325" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Utils/ConnectionsMobile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modals/ConnectionsModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modals/ConnectionsModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Utils/Connections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Utils/Connections.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Utils/ConnectionsMobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Utils/ConnectionsMobile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +82,8 @@
       <workItem from="1609514579676" duration="14667000" />
       <workItem from="1609591834079" duration="7706000" />
       <workItem from="1609604328456" duration="1292000" />
-      <workItem from="1609626841730" duration="2906000" />
+      <workItem from="1609626841730" duration="3584000" />
+      <workItem from="1609675058274" duration="2055000" />
     </task>
     <task id="LOCAL-00001" summary="All-in-One commit: Add map, add authentication sidebar">
       <created>1609097446585</created>
@@ -176,7 +176,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609605022764</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add separate connections table for mobile devices">
+      <created>1609630069652</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609630069652</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Remove console logs">
+      <created>1609630394704</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609630394704</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +222,8 @@
     <MESSAGE value="Change auth height in mobile version" />
     <MESSAGE value="hotfix for auth" />
     <MESSAGE value="Remove logo from mobile version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove logo from mobile version" />
+    <MESSAGE value="Add separate connections table for mobile devices" />
+    <MESSAGE value="Remove console logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove console logs" />
   </component>
 </project>

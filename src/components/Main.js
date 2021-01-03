@@ -17,8 +17,9 @@ export default function Main() {
 
     const [loggedInUser, setLoggedInUser] = React.useState('');
     const [selectedStation, setSelectedStation] = React.useState(null);
-    const [stations, setStations] = useState([]);
 
+
+    const [stations, setStations] = useState([]);
     const getStations = () => {
         Axios.get('https://go-electrical-server.herokuapp.com/stations_data').then((response) => {
             setStations(response.data);
