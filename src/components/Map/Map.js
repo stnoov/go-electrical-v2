@@ -1,6 +1,6 @@
 import mapStyles from "./mapStyles";
 import './Map.css';
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {GoogleMap, InfoWindow, Marker, useLoadScript} from "@react-google-maps/api";
 import chargingStationPicture from "../Images/charging_station.png";
 import SearchBar from "../Search/Searchbar";

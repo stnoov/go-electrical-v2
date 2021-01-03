@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9c4fb831-d0d3-4b85-a09d-637f17225325" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modals/ConnectionsModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modals/ConnectionsModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Utils/Connections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Utils/Connections.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Utils/ConnectionsMobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Utils/ConnectionsMobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Map/Map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +79,7 @@
       <workItem from="1609591834079" duration="7706000" />
       <workItem from="1609604328456" duration="1292000" />
       <workItem from="1609626841730" duration="3584000" />
-      <workItem from="1609675058274" duration="2055000" />
+      <workItem from="1609675058274" duration="2360000" />
     </task>
     <task id="LOCAL-00001" summary="All-in-One commit: Add map, add authentication sidebar">
       <created>1609097446585</created>
@@ -190,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609630394704</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fix stop/start charging functions">
+      <created>1609677583505</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1609677583505</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +227,7 @@
     <MESSAGE value="Remove logo from mobile version" />
     <MESSAGE value="Add separate connections table for mobile devices" />
     <MESSAGE value="Remove console logs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove console logs" />
+    <MESSAGE value="Fix stop/start charging functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix stop/start charging functions" />
   </component>
 </project>
